@@ -1,35 +1,35 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 008     PSP_DATA
-015     CCP_1
 015     CCP_1_LOW
+015     CCP_1
 016     CCP_1_HIGH
-01B     CCP_2_LOW
 01B     CCP_2
+01B     CCP_2_LOW
 01C     CCP_2_HIGH
 020-023 temperatura
+024-027 @PRINTF_L32D_723FPFPF.P1
+024     @PSTRINGCN7_723.P2
 024     lcd_init.i
-024-027 @PRINTF_L32D_660FPFPF.P1
-024-025 @ITOF.P2
-024     @PSTRINGCN7_660.P3
+024-025 @ITOF.P1
 025     lcd_init.@SCRATCH1
-025     @PSTRINGCN7_660.@SCRATCH1
-026     @PSTRINGCN7_660.@SCRATCH2
-027     @PSTRINGCN7_660.@SCRATCH3
-028     @PRINTF_L32D_660FPFPF.P1
-028     @PSTRINGCN7_660.@SCRATCH4
-029     @PRINTF_L32D_660FPFPF.@SCRATCH1
-02A     @PRINTF_L32D_660FPFPF.@SCRATCH2
-02B     @PRINTF_L32D_660FPFPF.@SCRATCH3
-02C     @PRINTF_L32D_660FPFPF.@SCRATCH4
-02D     @PRINTF_L32D_660FPFPF.@SCRATCH5
-02E     @PRINTF_L32D_660FPFPF.@SCRATCH6
-02F     @PRINTF_L32D_660FPFPF.@SCRATCH7
-030     @PRINTF_L32D_660FPFPF.@SCRATCH8
+025     @PSTRINGCN7_723.@SCRATCH1
+026     @PSTRINGCN7_723.@SCRATCH2
+027     @PSTRINGCN7_723.@SCRATCH3
+028     @PRINTF_L32D_723FPFPF.P1
+028     @PSTRINGCN7_723.@SCRATCH4
+029     @PRINTF_L32D_723FPFPF.@SCRATCH1
+02A     @PRINTF_L32D_723FPFPF.@SCRATCH2
+02B     @PRINTF_L32D_723FPFPF.@SCRATCH3
+02C     @PRINTF_L32D_723FPFPF.@SCRATCH4
+02D     @PRINTF_L32D_723FPFPF.@SCRATCH5
+02E     @PRINTF_L32D_723FPFPF.@SCRATCH6
+02F     @PRINTF_L32D_723FPFPF.@SCRATCH7
+030     @PRINTF_L32D_723FPFPF.@SCRATCH8
 031-034 @MULFF.P1
+031-034 @DIV3232.P2
 031     lcd_putc.c
 031-034 @FTOSD.P1
-031-034 @DIV3232.P2
 032     lcd_gotoxy.x
 032     @delay_ms1.P1
 033     lcd_gotoxy.y
@@ -73,7 +73,7 @@
 ROM Allocation:
 000004  LCD_INIT_STRING.call
 000008  LCD_INIT_STRING.data
-00000C  @const678.call
+00000C  @const741.call
 000017  @delay_ms1
 00002B  lcd_send_nibble
 000057  lcd_read_nibble
@@ -84,29 +84,28 @@ ROM Allocation:
 000108  @MULFF
 00017D  lcd_putc
 000194  lcd_gotoxy
-0001B1  @PSTRINGCN7_660
+0001B1  @PSTRINGCN7_723
 00020A  @DIV3232
-000259  @PRINTF_L32D_660FPFPF
+000259  @PRINTF_L32D_723FPFPF
 000280  @FTOSD
 00033B  @cinit1
 00033B  MAIN
 000345  @cinit2
 
 Project Directory:
-    E:\Martin Hdez\Desktop\CCS 16F\877A\Práctica 15\
+    C:\Users\victo\OneDrive\Documentos\X-TRAINER-hands-on\CCS\PIC16F\15-LM35-CCS-PIC16F887-877A\Proyecto\PIC16F877A\
 
 Project Files:
-    Sensor de temperatura LM35.c                            [24-feb.-22 15:24  CRC=C07D7E6E]
-    ..\..\..\..\..\Program Files\PICC\Devices\16F877A.h     [15-ene.-18 15:53  CRC=63418C39]
-    flex_lcd.h                                              [24-feb.-22 15:21  CRC=282E02A0]
+    Sensor de temperatura LM35.c                            [30-ago.-23 10:49  CRC=3CE1118C]
+    ..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h [02-may.-23 08:27  CRC=32478F9C]
+    flex_lcd.h                                              [24-feb.-22 23:03  CRC=282E02A0]
 
-Source signature=741B0FE7
+Source signature=BF84A668
 Program memory checksum=0000
-Program memory CRC=0000
-Hex file CRC=BF2F
+Hex file CRC=EBA1
 
 Units:
-    Sensor de temperatura LM35 (main)
+    C:\Users\victo\OneDrive\Documentos\X-TRAINER-hands-on\CCS\PIC16F\15-LM35-CCS-PIC16F887-877A\Proyecto\PIC16F877A\Sensor de temperatura LM35 (main)
 
 Compiler Settings:
     Processor:      PIC16F877A
@@ -115,7 +114,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:       CCS5
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   Sensor de temperatura LM35.xsym
